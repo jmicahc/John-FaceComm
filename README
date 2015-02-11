@@ -28,36 +28,43 @@ for each participant, as well as a master file and various summary pages.
 
 Included files:
 1. Main.java
-	- This is the Main class used to read in the server data,
-	parse participant data, and write the fully processed output to a new 
-	csv file.
+
+- The Main class used to read in the server data,
+  parse participant data, and write the fully processed output to a
+  new csv file.
 
 2. Participant.java
-	- An object class that represents all of the information associated wtih a
-	participant. This
+
+- An object class that represents all of the information associated 
+  wtih a single participant. 
 
 3. Picture.java
-	- An object class that represents all the data associated with a "trial",
-          i.e. each face description and each response. The Participant class contains
-	  a set of Picture objects representing all of that participant's data.
+
+- An object class that represents all the data associated with a "trial",
+  i.e. each face description and each response. The Participant class contains
+  a set of Picture objects representing all of that participant's data.
 
 4. ParticipantPair.java
-	- An object class that encapsolates data that is relavent to each pair
-	  of subjects. Also conatains references to the Participant instances
-	  associated with the pair.
+
+- An object class that encapsolates data that is relavent to each pair
+  of subjects. Also conatains references to the Participant instances
+  associated with the pair.
 
 5. ParticipantDataBase.java
-	- A database of Participant objects. This contains references to all
-	  of the data gathered in the experiment. It contains a hashmap
-	  with participant qseudo-names as keys and the data as values.
+- A database of Participant objects. This contains references to all
+  of the data gathered in the experiment. It contains a hashmap
+  with participant qseudo-names as keys and the data as values.
 
 6. PicturesDataBase.java
-	- A database of all Picture objects, used for "picture-wise" analysis
-	  of performance, rather than subject-wise analysis.
+
+- A database of all Picture objects, used for "picture-wise" analysis
+  of performance, rather than subject-wise analysis.
 
 7. Cell.java
-	- A small class helper function that encapsulates the notion of a "cell"
-	  in a spreadsheet.
+
+- A small class helper function that encapsulates the notion of a "cell"
+  in a spreadsheet.
 
 8. sheetWriter.java
-	- A helper class used to write the processed data out to a new spreadsheet.
+
+- A helper class used to write the processed data out to a new spreadsheet.
