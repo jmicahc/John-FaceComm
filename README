@@ -1,0 +1,61 @@
+This repository contains the analysis code for experiment that was
+ran in Nick Davidenko's Perception lab at University of California, Santa Cruz.
+
+The experiment is about how people describe faces. The experiment consists
+of 3 phase:
+	1. Test Phase.
+	   - Two paricipants independently describe a series of faces.
+	     Descriptions are typed into a chat box, which are recorded 
+	     by the server. After describing the faces, participants
+	     are given eachother's descriptions and then asked to perform
+	     a matching task in which they match up each description with each
+             face.
+	2. Conversation Phase.
+	     The participants trade off describing a face while the other attempts
+	     to match the description to one face among a list of faces. Importantly,
+	     the guesser is alowed to converse with the describer while attempting to
+             identify the face.
+	3. Test Phase.
+	     This phase is equivalent to the first phase and is included to measure
+	     improvement after the conversation phase.
+
+
+The code takes as input unprocessed server data (see serverData_new.xls
+and serverData_old.xls) and outputs a processed form with data pages
+for each participant, as well as a master file and various summary pages.
+
+Included files:
+	1. Main.java
+		- This is the Main class used to read in the server data,
+		parse participant data, and write the fully processed output to a new 
+		csv file.
+
+	2. Participant.java
+		- An object class that represents all of the information associated wtih a
+		participant. This
+	
+	3. Picture.java
+		- An object class that represents all the data associated with a "trial",
+	          i.e. each face description and each response. The Participant class contains
+		  a set of Picture objects representing all of that participant's data.
+
+	4. ParticipantPair.java
+		- An object class that encapsolates data that is relavent to each pair
+		  of subjects. Also conatains references to the Participant instances
+		  associated with the pair.
+
+	5. ParticipantDataBase.java
+		- A database of Participant objects. This contains references to all
+		  of the data gathered in the experiment. It contains a hashmap
+		  with participant qseudo-names as keys and the data as values.
+
+	6. PicturesDataBase.java
+		- A database of all Picture objects, used for "picture-wise" analysis
+		  of performance, rather than subject-wise analysis.
+
+	7. Cell.java
+		- A small class helper function that encapsulates the notion of a "cell"
+		  in a spreadsheet.
+	
+	8. sheetWriter.java
+		- A helper class used to write the processed data out to a new spreadsheet.
